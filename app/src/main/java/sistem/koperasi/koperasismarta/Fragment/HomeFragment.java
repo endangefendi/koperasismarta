@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -40,8 +41,8 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     List<TopUpTagihanModel> topUpMenu = new ArrayList<>();
 
     private SwipeRefreshLayout refreshLayout;
-    private TextView ciutMenuTopUp;
-    private TextView ciutMenuHome;
+    private ImageView ciutMenuTopUp;
+    private ImageView ciutMenuHome;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);

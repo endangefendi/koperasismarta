@@ -90,7 +90,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/_40sdp"
                                 android:gravity="center_vertical"
@@ -111,21 +111,16 @@
                                     android:drawableTint="@android:color/darker_gray"
                                     tools:ignore="HardcodedText" />
 
-                                <TextView
+                                <ImageView
                                     android:id="@+id/ciutKanMenu"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Less..."
-                                    android:gravity="end"
-                                    android:layout_marginStart="@dimen/_55sdp"
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:src="@drawable/ic_up_arrow"
+                                    android:layout_alignParentEnd="true"
                                     android:layout_marginEnd="@dimen/_12sdp"
-                                    android:textColor="#656565"
-                                    android:visibility="gone"
-                                    android:textSize="@dimen/_10sdp"
-                                    android:textStyle="bold"
-                                    tools:ignore="HardcodedText" />
+                                    android:visibility="gone"/>
 
-                            </LinearLayout>
+                            </RelativeLayout>
 
                             <sistem.koperasi.koperasismarta.util.CustomGridView
                                 android:id="@+id/grdKoperasi"
@@ -154,7 +149,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/_40sdp"
                                 android:gravity="center_vertical"
@@ -173,20 +168,17 @@
                                     card_view:drawableStartCompat="@drawable/loan"
                                     android:drawableTint="@android:color/darker_gray"
                                     tools:ignore="HardcodedText" />
-                                <TextView
+                                <ImageView
                                     android:id="@+id/ciutKanTopUp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Less..."
-                                    android:gravity="end"
-                                    android:layout_marginStart="@dimen/_55sdp"
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:src="@drawable/ic_up_arrow"
+                                    android:layout_alignParentEnd="true"
                                     android:layout_marginEnd="@dimen/_12sdp"
-                                    android:textColor="#656565"
-                                    android:visibility="gone"
-                                    android:textSize="@dimen/_10sdp"
-                                    android:textStyle="bold"
-                                    tools:ignore="HardcodedText" />
-                            </LinearLayout>
+                                    android:visibility="visible"
+                                    />
+
+                            </RelativeLayout>
 
                             <sistem.koperasi.koperasismarta.util.CustomGridView
                                 android:id="@+id/grdTopUpTagihan"
