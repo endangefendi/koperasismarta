@@ -21,7 +21,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sistem.koperasi.koperasismarta.R;
+import sistem.koperasi.koperasismarta.activity.AboutUsActivity;
+import sistem.koperasi.koperasismarta.activity.BeritaActivity;
+import sistem.koperasi.koperasismarta.activity.FAQActivity;
+import sistem.koperasi.koperasismarta.activity.InboxActivity;
+import sistem.koperasi.koperasismarta.activity.KalkulatorActivity;
+import sistem.koperasi.koperasismarta.activity.PengajuanActivity;
+import sistem.koperasi.koperasismarta.activity.PengurusActivity;
+import sistem.koperasi.koperasismarta.activity.PinjamanActivity;
 import sistem.koperasi.koperasismarta.activity.SimpananKoperasiActivity;
+import sistem.koperasi.koperasismarta.activity.TokoOnlineActivity;
+import sistem.koperasi.koperasismarta.activity.UnduhanActivity;
 import sistem.koperasi.koperasismarta.adapter.MenuKoperasiAdapter;
 import sistem.koperasi.koperasismarta.adapter.TopUpTagihanAdapter;
 import sistem.koperasi.koperasismarta.model.HomeKoperasiModel;
@@ -188,43 +198,53 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
             }
             break;
             case "Pinjaman": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), PinjamanActivity.class);
+                startActivity(intent);
             }
             break;
             case "Pengajuan": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), PengajuanActivity.class);
+                startActivity(intent);
             }
             break;
             case "Berita": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), BeritaActivity.class);
+                startActivity(intent);
             }
             break;
             case "Inbox": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), InboxActivity.class);
+                startActivity(intent);
             }
             break;
             case "Toko Online": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), TokoOnlineActivity.class);
+                startActivity(intent);
             }
             break;
             case "Pengurus": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), PengurusActivity.class);
+                startActivity(intent);
             }
             break;
             case "Kalkulator": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), KalkulatorActivity.class);
+                startActivity(intent);
             }
             break;
             case "About US": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), AboutUsActivity.class);
+                startActivity(intent);
             }
             break;
             case "Unduhan": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), UnduhanActivity.class);
+                startActivity(intent);
             }
             break;
             case "FAQ": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), FAQActivity.class);
+                startActivity(intent);
             }
             break;
 
