@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sistem.koperasi.koperasismarta.R;
+import sistem.koperasi.koperasismarta.activity.SimpananKoperasiActivity;
 import sistem.koperasi.koperasismarta.adapter.MenuKoperasiAdapter;
 import sistem.koperasi.koperasismarta.adapter.TopUpTagihanAdapter;
 import sistem.koperasi.koperasismarta.model.HomeKoperasiModel;
@@ -181,7 +182,8 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
             }
             break;
             case "Simpanan Koperasi": {
-                Log.e(TAG, item.title + " clicked");
+                intent = new Intent(getActivity(), SimpananKoperasiActivity.class);
+                startActivity(intent);
             }
             break;
             case "Pinjaman": {
