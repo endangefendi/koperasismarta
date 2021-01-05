@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nowbgh"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        card_view:cardCornerRadius="22dp"
+                        card_view:cardElevation="1dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Saldo anda"
+                                android:textStyle="bold"
+                                android:layout_marginEnd="@dimen/_11sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_gravity="end"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:layout_marginEnd="@dimen/_11sdp"
+                                android:layout_gravity="end"/>
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_90sdp"
+                                android:padding="@dimen/_4sdp"
+                                android:src="@drawable/pt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_gravity="center"
+                                android:text="Koperasi Semarta"
+                                android:textColor="#656565"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="@dimen/_4sdp"
+                                />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        card_view:cardCornerRadius="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        card_view:cardElevation="3dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/myshape"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:drawablePadding="10dp"
+                                    android:text="Menu Koperasi"
+                                    android:textColor="#656565"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textStyle="bold"
+                                    card_view:drawableStartCompat="@drawable/warranty"
+                                    android:drawableTint="@android:color/darker_gray"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/ciutKanMenu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Less..."
+                                    android:gravity="end"
+                                    android:layout_marginStart="@dimen/_55sdp"
+                                    android:layout_marginEnd="@dimen/_12sdp"
+                                    android:textColor="#656565"
+                                    android:visibility="gone"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText" />
+
+                            </LinearLayout>
+
+                            <sistem.koperasi.koperasismarta.util.CustomGridView
+                                android:id="@+id/grdKoperasi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:verticalSpacing="@dimen/_1sdp"
+                                android:numColumns="4" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        card_view:cardCornerRadius="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        card_view:cardElevation="3dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/myshape"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:drawablePadding="10dp"
+                                    android:text="Topup Dan Tagihan"
+                                    android:textColor="#656565"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textStyle="bold"
+                                    card_view:drawableStartCompat="@drawable/loan"
+                                    android:drawableTint="@android:color/darker_gray"
+                                    tools:ignore="HardcodedText" />
+                                <TextView
+                                    android:id="@+id/ciutKanTopUp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Less..."
+                                    android:gravity="end"
+                                    android:layout_marginStart="@dimen/_55sdp"
+                                    android:layout_marginEnd="@dimen/_12sdp"
+                                    android:textColor="#656565"
+                                    android:visibility="gone"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                            <sistem.koperasi.koperasismarta.util.CustomGridView
+                                android:id="@+id/grdTopUpTagihan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:verticalSpacing="@dimen/_1sdp"
+                                android:numColumns="4" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

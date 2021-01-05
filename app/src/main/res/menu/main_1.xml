@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/begining"
+        android:title="Pinjaman Terlaksana" />
+
+    <item
+        android:id="@+id/startnow"
+        android:title="Pinjaman Lunas" />
+
+    <item
+        android:id="@+id/endnow"
+        android:title="Data Pinjaman" />
+</menu>

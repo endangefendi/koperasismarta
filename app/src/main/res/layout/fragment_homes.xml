@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nowbgh"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="10dp"
+                    android:text="saldo anda"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Rp."
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/saldo_sisa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="203dp"
+            card_view:cardCornerRadius="22dp"
+            card_view:cardElevation="1dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="188dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="146dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/pt" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="Koperasi Semarta"
+                    android:textColor="#656565"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardElevation="3dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/myshape"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:drawablePadding="10dp"
+                            android:text="Menu Koperasi"
+                            android:textColor="#656565"
+                            android:textSize="19sp"
+                            android:textStyle="bold"
+                            card_view:drawableStartCompat="@drawable/warranty"
+                            android:drawableTint="@android:color/darker_gray"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginEnd="15sp"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="4"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/dashboards" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="DashBoard"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/tagihan_bpjs" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Simpanan Koperasi"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="39dp"
+                                android:layout_height="33dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/pinjaman" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pinjaman"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="39dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/icons_overview_pages_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:text="Pengajuan"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15sp"
+                        android:weightSum="4"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:layout_width="44dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/icons_tags" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="27dp"
+                                android:text="Berita"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:layout_width="39dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/message" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Inbox"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:layout_width="39dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/ic_toko" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:text="Toko Online"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/btnDown"
+                                android:layout_width="64dp"
+                                android:layout_height="33dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/app" />
+
+                            <TextView
+                                android:id="@+id/textMore"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="More"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/btnUp"
+                                android:layout_width="65dp"
+                                android:layout_height="33dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/chevron_up"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/textLess"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="less"
+                                android:visibility="gone"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/panel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/pngwave" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pengurus"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="39dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/calcu" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kalkulator"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/us" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="About US"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/dwh" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Unduhan"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:weightSum="4"
+                            android:layout_marginBottom="10dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:visibility="visible">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/faq" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="FAQ"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardElevation="3dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/myshape"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="268dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:drawablePadding="10dp"
+                            android:text="Topup Dan Tagihan"
+                            android:textColor="#656565"
+                            android:textSize="19sp"
+                            android:textStyle="bold"
+                            card_view:drawableStartCompat="@drawable/loan"
+                            android:drawableTint="@android:color/darker_gray"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="39dp"
+                                android:layout_height="33dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/bpjs" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tagihan BPJS"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="27dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/tagihan_listrik" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tagihan Listrik"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="39dp"
+                                android:layout_height="33dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/odo" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="OVO"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="39dp"
+                                android:layout_height="33dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/paypay" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gopay"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="4"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:layout_width="44dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/tagihan_air" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tagihan PDAM"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:layout_width="39dp"
+                                android:layout_height="33dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/tagihan_telpon" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Telepon"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:layout_width="39dp"
+                                android:layout_height="33dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/wifi" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Voucher Wifi"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/btnDown2"
+                                android:layout_width="64dp"
+                                android:layout_height="33dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/app" />
+
+                            <TextView
+                                android:id="@+id/textMore2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="More"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/btnUp2"
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_button"
+                                android:src="@drawable/chevron_up"
+                                tools:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/textLess2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="less"
+                                android:textAlignment="center"
+                                android:textColor="#393939"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/panel2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical"
+                        tools:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/game" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Voucher Game"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/tagihan_multi" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="E-money"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/token_pln" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Token Listrik"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/etoll" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="E-Toll"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/freefire" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Diamond Free Fire"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/gplay" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="28dp"
+                                    android:text="Voucher Google Play"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="34dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/asuransi" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="28dp"
+                                    android:text="Asuransi"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="27dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/tagihan_tv" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="28dp"
+                                    android:text="Tagihan Tv"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/bpjs" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="28dp"
+                                    android:text="Pulsa  Sms Telp"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/itunes" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Itunes Gift"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/tagihan_multi1" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Zakat"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/cash" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Multi finance"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/pubg" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pubg Mobile"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/odo" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="OVO"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="27dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/tagihan_listrik" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tagihan Listrik"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="39dp"
+                                    android:layout_height="33dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_button"
+                                    android:src="@drawable/bpjs" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tagihan BPJS"
+                                    android:textAlignment="center"
+                                    android:textColor="#393939"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,SmallSp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
