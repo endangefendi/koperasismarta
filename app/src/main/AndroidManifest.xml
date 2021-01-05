@@ -56,6 +56,17 @@
             android:theme="@style/AppThemes"/>
 
         <activity
+            android:name=".activity.FAQActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes" />
+
+        <activity
+            android:name=".activity.UnduhanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes" />
+
+
+        <activity
             android:name=".activity.SimpananKoperasiActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemes" />
