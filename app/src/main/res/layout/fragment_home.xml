@@ -42,14 +42,17 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Saldo anda"
+                                android:textSize="@dimen/_12sdp"
                                 android:textStyle="bold"
                                 android:layout_marginEnd="@dimen/_11sdp"
                                 android:layout_marginTop="@dimen/_3sdp"
                                 android:layout_gravity="end"/>
                             <TextView
+                                android:id="@+id/saldo_sisa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="0"
+                                android:textSize="@dimen/_12sdp"
                                 android:textStyle="bold"
                                 android:layout_marginEnd="@dimen/_11sdp"
                                 android:layout_gravity="end"/>
@@ -57,7 +60,7 @@
                             <ImageView
                                 android:id="@+id/imageView3"
                                 android:layout_width="match_parent"
-                                android:layout_height="@dimen/_90sdp"
+                                android:layout_height="@dimen/_75sdp"
                                 android:padding="@dimen/_4sdp"
                                 android:src="@drawable/pt" />
 
@@ -68,7 +71,7 @@
                                 android:layout_gravity="center"
                                 android:text="Koperasi Semarta"
                                 android:textColor="#656565"
-                                android:textSize="19sp"
+                                android:textSize="@dimen/_15sdp"
                                 android:textStyle="bold"
                                 android:layout_marginBottom="@dimen/_4sdp"
                                 />

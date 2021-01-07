@@ -1,15 +1,13 @@
 package sistem.koperasi.koperasismarta.Fragment;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -100,13 +98,14 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
     private void addMenuKoperasi() {
         homesMenu.clear();
-        homesMenu.add(new HomeKoperasiModel(R.drawable.dashboards, "DashBoard"));
+//        homesMenu.add(new HomeKoperasiModel(R.drawable.dashboards, "DashBoard"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.tagihan_bpjs, "Simpanan Koperasi"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.pinjaman, "Pinjaman"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_overview_pages_1, "Pengajuan"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_tags, "Berita"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.message, "Inbox"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.ic_toko, "Toko Online"));
+        homesMenu.add(new HomeKoperasiModel(R.drawable.pngwave, "Pengurus"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.app, "More"));
         adapterMenu.addList(homesMenu);
         grdKoperasi.setAdapter(adapterMenu);
@@ -115,7 +114,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
     private void addMenuKoperasiLagi() {
         homesMenu.clear();
-        homesMenu.add(new HomeKoperasiModel(R.drawable.dashboards, "DashBoard"));
+//        homesMenu.add(new HomeKoperasiModel(R.drawable.dashboards, "DashBoard"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.tagihan_bpjs, "Simpanan Koperasi"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.pinjaman, "Pinjaman"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_overview_pages_1, "Pengajuan"));
@@ -152,7 +151,6 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
     private void addMenuTopUpTagihanLagi() {
         topUpMenu.clear();
-        topUpMenu.add(new TopUpTagihanModel(R.drawable.dashboards, "DashBoard"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.bpjs, "Tagihan BPJS"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.tagihan_listrik, "Tagihan Listrik"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.odo, "OVO"));
@@ -171,7 +169,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         topUpMenu.add(new TopUpTagihanModel(R.drawable.bpjs, "Pulsa"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.itunes, "Itunes Gift"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.tagihan_multi1, "Zakat"));
-        topUpMenu.add(new TopUpTagihanModel(R.drawable.cash, "Multi finance"));
+        topUpMenu.add(new TopUpTagihanModel(R.drawable.cash, "Multi Finance"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.pubg, "Pubg Mobile"));
         adapterTopUpTagihan.addList(topUpMenu);
         grdTopUp.setAdapter(adapterTopUpTagihan);
@@ -182,7 +180,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
     @Override
     public void onItemClicked(int position, HomeKoperasiModel item) {
-        Intent intent = null;
+        Intent intent;
         switch (item.title) {
             case "More": {
                 addMenuKoperasiLagi();
@@ -247,14 +245,17 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 startActivity(intent);
             }
             break;
-
         }
+
     }
 
     @Override
     public void onItemClicked(int position, TopUpTagihanModel item) {
         if (item.title.equalsIgnoreCase("More")){
             addMenuTopUpTagihanLagi();
+        }else {
+            Log.e(TAG,item.title+" clicked");
+            Toast.makeText(getActivity(),item.title+" clicked",Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -272,4 +273,5 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
             addMenuKoperasi();
         }
     }
+
 }
