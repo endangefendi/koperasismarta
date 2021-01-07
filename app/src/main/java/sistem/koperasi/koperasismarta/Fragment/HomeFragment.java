@@ -1,19 +1,30 @@
 package sistem.koperasi.koperasismarta.Fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +41,10 @@ import sistem.koperasi.koperasismarta.activity.PinjamanActivity;
 import sistem.koperasi.koperasismarta.activity.SimpananKoperasiActivity;
 import sistem.koperasi.koperasismarta.activity.TokoOnlineActivity;
 import sistem.koperasi.koperasismarta.activity.UnduhanActivity;
+import sistem.koperasi.koperasismarta.adapter.HomeBannerAdapter;
 import sistem.koperasi.koperasismarta.adapter.MenuKoperasiAdapter;
 import sistem.koperasi.koperasismarta.adapter.TopUpTagihanAdapter;
+import sistem.koperasi.koperasismarta.model.HomeBannerModel;
 import sistem.koperasi.koperasismarta.model.HomeKoperasiModel;
 import sistem.koperasi.koperasismarta.model.TopUpTagihanModel;
 import sistem.koperasi.koperasismarta.util.CustomGridView;
@@ -51,6 +64,17 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     private SwipeRefreshLayout refreshLayout;
     private ImageView ciutMenuTopUp;
     private ImageView ciutMenuHome;
+
+    //Slider
+    private List<HomeBannerModel> list_banner= new ArrayList<>();;
+    private ViewPager viewPager;
+    private Handler handler = new Handler();
+    private Runnable runnableCode = null;
+    private HomeBannerAdapter adapter_banner;
+    private TextView features_news_title;
+    private View lyt_main_content;
+    private LinearLayout layout_dots;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -63,6 +87,29 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         ciutMenuHome.setVisibility(View.GONE);
         ciutMenuTopUp.setVisibility(View.GONE);
 
+
+        lyt_main_content = root.findViewById(R.id.lyt_cart);
+        features_news_title = root.findViewById(R.id.featured_news_title);
+        layout_dots = root.findViewById(R.id.layout_dots);
+        viewPager = root.findViewById(R.id.pager);
+        adapter_banner = new HomeBannerAdapter(getActivity(), new ArrayList<HomeBannerModel>());
+
+        //next or prev button image
+        ImageButton bt_previous = root.findViewById(R.id.bt_previous);
+        ImageButton bt_next = root.findViewById(R.id.bt_next);
+        bt_previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevAction();
+            }
+        });
+
+        bt_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nextAction();
+            }
+        });
         return root;
     }
 
@@ -76,6 +123,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         refreshLayout.setRefreshing(true);
         addMenuKoperasi();
         addMenuTopUpTagihan();
+        addBanner();
 
 
         ciutMenuTopUp.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +142,122 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
             }
         });
     }
+
+    private void addBanner() {
+        list_banner.clear();
+        HomeBannerModel item1 = new HomeBannerModel(1, 1, getResources().getString(R.string.app_name),
+                getResources().getDrawable(R.drawable.pt), "PT");
+        HomeBannerModel item2 = new HomeBannerModel(1, 1, "Promo Bpjs",
+                getResources().getDrawable(R.drawable.bpjs), "Promo");
+        list_banner.add(item1);
+        list_banner.add(item2);
+        displayResultData(list_banner);
+    }
+
+    private void prevAction() {
+        handler.removeCallbacksAndMessages(null);
+        int pos = viewPager.getCurrentItem();
+        pos = pos - 1;
+        if (pos < 0) pos = adapter_banner.getCount();
+        viewPager.setCurrentItem(pos);
+    }
+
+    private void nextAction() {
+        handler.removeCallbacksAndMessages(null);
+        int pos = viewPager.getCurrentItem();
+        pos = pos + 1;
+        if (pos >= adapter_banner.getCount()) pos = 0;
+        viewPager.setCurrentItem(pos);
+    }
+
+    private void displayResultData(List<HomeBannerModel> items) {
+        adapter_banner.setItems(items);
+        viewPager.setAdapter(adapter_banner);
+
+        ViewGroup.LayoutParams params = viewPager.getLayoutParams();
+        params.height = getFeaturedNewsImageHeight(getActivity());
+        viewPager.setLayoutParams(params);
+
+        // displaying selected image first
+        viewPager.setCurrentItem(0);
+        features_news_title.setText(adapter_banner.getItem(0).getSlider_judul());
+        addBottomDots(layout_dots, adapter_banner.getCount(), 0);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int pos, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int pos) {
+                HomeBannerModel cur = adapter_banner.getItem(pos);
+                features_news_title.setText(cur.getSlider_judul());
+                addBottomDots(layout_dots, adapter_banner.getCount(), pos);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+
+        startAutoSlider(adapter_banner.getCount());
+        adapter_banner.setOnItemClickListener(new HomeBannerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, HomeBannerModel obj) {
+                Snackbar.make(view, obj.getSlider_judul()+" clicked", Snackbar.LENGTH_SHORT).show();
+            }
+        });
+        lyt_main_content.setVisibility(View.VISIBLE);
+    }
+
+    private void startAutoSlider(final int count) {
+        runnableCode = new Runnable() {
+            @Override
+            public void run() {
+                int pos = viewPager.getCurrentItem();
+                pos = pos + 1;
+                if (pos >= count) pos = 0;
+                viewPager.setCurrentItem(pos);
+                handler.postDelayed(runnableCode, 5000);
+            }
+        };
+        handler.postDelayed(runnableCode, 5000);
+    }
+    @Override
+    public void onDestroy() {
+        if (runnableCode != null) handler.removeCallbacks(runnableCode);
+        super.onDestroy();
+    }
+
+    private void addBottomDots(LinearLayout layout_dots, int size, int current) {
+        ImageView[] dots = new ImageView[size];
+
+        layout_dots.removeAllViews();
+        for (int i = 0; i < dots.length; i++) {
+            dots[i] = new ImageView(getActivity());
+            int width_height = 10;
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(new ViewGroup.LayoutParams(width_height, width_height));
+            params.setMargins(10, 10, 10, 10);
+            dots[i].setLayoutParams(params);
+            dots[i].setImageResource(R.drawable.ic_shape);
+            dots[i].setColorFilter(ContextCompat.getColor(getActivity(), R.color.darkOverlaySoft));
+            layout_dots.addView(dots[i]);
+        }
+
+        if (dots.length > 0) {
+            dots[current].setColorFilter(ContextCompat.getColor(getActivity(), R.color.blue));
+        }
+    }
+
+    private static int getFeaturedNewsImageHeight(Activity activity) {
+        float w_ratio = 2, h_ratio = 1; // we use 2:1 ratio
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        display.getMetrics(displayMetrics);
+        float screenWidth = displayMetrics.widthPixels - 10;
+        float resHeight = (screenWidth * h_ratio) / w_ratio;
+        return Math.round(resHeight);
+    }
+
 
 
     private void addMenuKoperasi() {
@@ -272,6 +436,9 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         }else {
             addMenuKoperasi();
         }
+
+        if (runnableCode != null) handler.removeCallbacks(runnableCode);
+        addBanner();
     }
 
 }
