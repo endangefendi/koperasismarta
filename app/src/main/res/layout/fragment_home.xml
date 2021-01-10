@@ -139,42 +139,6 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        card_view:cardCornerRadius="22dp"
-                        card_view:cardElevation="1dp"
-                        android:visibility="gone"
-                        card_view:cardUseCompatPadding="true">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:id="@+id/imageView3"
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/_75sdp"
-                                android:padding="@dimen/_4sdp"
-                                android:src="@drawable/pt" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
-                                android:layout_gravity="center"
-                                android:text="Koperasi Semarta"
-                                android:textColor="#656565"
-                                android:textSize="@dimen/_15sdp"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="@dimen/_4sdp"
-                                />
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         card_view:cardCornerRadius="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"

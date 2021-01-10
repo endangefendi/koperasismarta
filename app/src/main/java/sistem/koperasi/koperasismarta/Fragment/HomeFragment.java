@@ -53,7 +53,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         MenuKoperasiAdapter.OnItemClickListener,
         TopUpTagihanAdapter.OnItemClickListener{
 
-    final static String TAG= "HomeFragment";
+    final private static String TAG= "HomeFragment";
     private MenuKoperasiAdapter adapterMenu;
     private TopUpTagihanAdapter adapterTopUpTagihan;
     private CustomGridView grdKoperasi;
@@ -264,7 +264,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         homesMenu.clear();
 //        homesMenu.add(new HomeKoperasiModel(R.drawable.dashboards, "DashBoard"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.tagihan_bpjs, "Simpanan Koperasi"));
-        homesMenu.add(new HomeKoperasiModel(R.drawable.pinjaman, "Pinjaman"));
+        homesMenu.add(new HomeKoperasiModel(R.drawable.pinjaman, "Pinjaman & Bayar Pinjaman"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_overview_pages_1, "Pengajuan"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_tags, "Berita"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.message, "Inbox"));
@@ -280,7 +280,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         homesMenu.clear();
 //        homesMenu.add(new HomeKoperasiModel(R.drawable.dashboards, "DashBoard"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.tagihan_bpjs, "Simpanan Koperasi"));
-        homesMenu.add(new HomeKoperasiModel(R.drawable.pinjaman, "Pinjaman"));
+        homesMenu.add(new HomeKoperasiModel(R.drawable.pinjaman, "Pinjaman & Bayar Pinjaman"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_overview_pages_1, "Pengajuan"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_tags, "Berita"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.message, "Inbox"));
