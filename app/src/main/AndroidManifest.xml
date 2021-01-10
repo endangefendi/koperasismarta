@@ -12,6 +12,11 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
 
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -23,59 +28,61 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemes">
 
-        <activity android:name=".activity.AboutUsActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemes"/>
-
-        <activity android:name=".activity.KalkulatorActivity"
+        <activity android:name=".activity.DetailPinjamanActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemes" />
-
-        <activity android:name=".activity.PengurusActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemes"/>
-
-        <activity android:name=".activity.TokoOnlineActivity"
+        <activity
+            android:name=".activity.AktivasiAnggotaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemes" />
-
-        <activity android:name=".activity.InboxActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemes"/>
-
-        <activity android:name=".activity.BeritaActivity"
+        <activity
+            android:name=".activity.AboutUsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemes" />
-
-        <activity android:name=".activity.PengajuanActivity"
+        <activity
+            android:name=".activity.KalkulatorActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemes"/>
-
-        <activity android:name=".activity.PinjamanActivity"
+            android:theme="@style/AppThemes" />
+        <activity
+            android:name=".activity.PengurusActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemes"/>
-
+            android:theme="@style/AppThemes" />
+        <activity
+            android:name=".activity.TokoOnlineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes" />
+        <activity
+            android:name=".activity.InboxActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes" />
+        <activity
+            android:name=".activity.BeritaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes" />
+        <activity
+            android:name=".activity.PengajuanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes" />
+        <activity
+            android:name=".activity.PinjamanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemes" />
         <activity
             android:name=".activity.FAQActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemes" />
-
         <activity
             android:name=".activity.UnduhanActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemes" />
-
-
         <activity
             android:name=".activity.SimpananKoperasiActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemes" />
-
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemes" />
-
         <activity
             android:name=".activity.SplashScreenActivity"
             android:screenOrientation="portrait"
@@ -92,9 +99,4 @@
             android:required="false" />
     </application>
 
-    <supports-screens
-        android:anyDensity="true"
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:smallScreens="true" />
 </manifest>

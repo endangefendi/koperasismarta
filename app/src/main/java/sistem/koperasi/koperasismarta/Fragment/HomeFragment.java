@@ -31,6 +31,7 @@ import java.util.List;
 
 import sistem.koperasi.koperasismarta.R;
 import sistem.koperasi.koperasismarta.activity.AboutUsActivity;
+import sistem.koperasi.koperasismarta.activity.AktivasiAnggotaActivity;
 import sistem.koperasi.koperasismarta.activity.BeritaActivity;
 import sistem.koperasi.koperasismarta.activity.FAQActivity;
 import sistem.koperasi.koperasismarta.activity.InboxActivity;
@@ -266,10 +267,10 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         homesMenu.add(new HomeKoperasiModel(R.drawable.tagihan_bpjs, "Simpanan Koperasi"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.pinjaman, "Pinjaman & Bayar Pinjaman"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_overview_pages_1, "Pengajuan"));
+        homesMenu.add(new HomeKoperasiModel(R.drawable.icons_tags, "Aktivasi Anggota"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_tags, "Berita"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.message, "Inbox"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.ic_toko, "Toko Online"));
-        homesMenu.add(new HomeKoperasiModel(R.drawable.pngwave, "Pengurus"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.app, "More"));
         adapterMenu.addList(homesMenu);
         grdKoperasi.setAdapter(adapterMenu);
@@ -282,6 +283,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         homesMenu.add(new HomeKoperasiModel(R.drawable.tagihan_bpjs, "Simpanan Koperasi"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.pinjaman, "Pinjaman & Bayar Pinjaman"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_overview_pages_1, "Pengajuan"));
+        homesMenu.add(new HomeKoperasiModel(R.drawable.icons_tags, "Aktivasi Anggota"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.icons_tags, "Berita"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.message, "Inbox"));
         homesMenu.add(new HomeKoperasiModel(R.drawable.ic_toko, "Toko Online"));
@@ -320,8 +322,8 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         topUpMenu.add(new TopUpTagihanModel(R.drawable.odo, "OVO"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.paypay, "Gopay"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.tagihan_air, "Tagihan PDAM"));
-        topUpMenu.add(new TopUpTagihanModel(R.drawable.wifi, "Voucher Wifi"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.tagihan_telpon, "Telepon"));
+        topUpMenu.add(new TopUpTagihanModel(R.drawable.wifi, "Voucher Wifi"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.game, "Voucher Game"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.tagihan_multi, "E-money"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.token_pln, "Token Listrik"));
@@ -359,13 +361,18 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 startActivity(intent);
             }
             break;
-            case "Pinjaman": {
+            case "Pinjaman & Bayar Pinjaman": {
                 intent = new Intent(getActivity(), PinjamanActivity.class);
                 startActivity(intent);
             }
             break;
             case "Pengajuan": {
                 intent = new Intent(getActivity(), PengajuanActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "Aktivasi Anggota": {
+                intent = new Intent(getActivity(), AktivasiAnggotaActivity.class);
                 startActivity(intent);
             }
             break;

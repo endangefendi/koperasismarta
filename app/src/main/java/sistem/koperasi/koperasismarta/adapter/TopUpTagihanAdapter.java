@@ -12,7 +12,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import sistem.koperasi.koperasismarta.R;
-import sistem.koperasi.koperasismarta.model.HomeKoperasiModel;
 import sistem.koperasi.koperasismarta.model.TopUpTagihanModel;
 
 public class TopUpTagihanAdapter extends BaseAdapter {
