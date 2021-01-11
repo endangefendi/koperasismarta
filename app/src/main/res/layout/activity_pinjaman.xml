@@ -35,7 +35,7 @@
                 android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pinjaman"
+                android:text="Pinjaman &amp; Bayar Pinjaman"
                 android:layout_marginStart="@dimen/_6sdp"
                 android:textSize="@dimen/_15sdp"
                 android:textStyle="bold"
@@ -79,14 +79,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:paddingTop="@dimen/_10sdp"
-                        android:paddingEnd="@dimen/_10sdp"
-                        android:paddingStart="@dimen/_10sdp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
+
                             android:layout_marginBottom="@dimen/_3sdp"
                             >
                             <TextView

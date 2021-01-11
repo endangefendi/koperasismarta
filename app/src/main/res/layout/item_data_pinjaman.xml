@@ -134,6 +134,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
                     android:background="@color/grey_40" />
 
             </LinearLayout>
