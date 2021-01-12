@@ -11,7 +11,6 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/blue"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
 
@@ -28,7 +27,6 @@
                 android:paddingBottom="@dimen/_5sdp"
                 android:visibility="visible"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                app:tint="@color/white"
                 android:src="@drawable/ic_back"/>
 
             <TextView
@@ -39,7 +37,6 @@
                 android:layout_marginStart="@dimen/_6sdp"
                 android:textSize="@dimen/_15sdp"
                 android:textStyle="bold"
-                android:textColor="@color/white"
                 android:lines="1"
                 android:layout_toEndOf="@+id/iv_back"
                 android:layout_centerVertical="true"/>
@@ -47,4 +44,336 @@
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_40"
+        android:layout_marginBottom="@dimen/_5sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/_3sdp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:text="Tenor Pinjaman "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text=":"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_tenor"
+            android:padding="@dimen/_10sdp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="Detail Pinjaman"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:text="Tujuan"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text=":"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_tujuan"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/_3sdp"
+        >
+
+        <TextView
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:text="Jumlah"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text=":"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_jumlah"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="Pencairan pinjaman"
+        android:textStyle="bold"
+        />
+
+    <RadioGroup
+        android:id="@+id/list_jawaban"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/tf"
+            android:textSize="@dimen/_11sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"
+            android:checked="false"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:button="@drawable/radio_check"
+            android:text="Ke Rekening" />
+
+        <RadioButton
+            android:id="@+id/offline"
+            android:textSize="@dimen/_11sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"
+            android:checked="false"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:button="@drawable/radio_check"
+            android:text="Ambil di kasir" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="Detail Pinjaman"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_70sdp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_3sdp"
+            >
+
+            <TextView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:layout_weight="0.25"
+                android:text="Pinjaman diajukan"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/jumlah_ajuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:gravity="end"
+                android:layout_weight="1.5"
+                android:text="Rp. xxxxx"
+                android:maxLines="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:layout_weight="0.25"
+                android:text="Admin fee"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/jumlah_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:gravity="end"
+                android:layout_weight="1.5"
+                android:text="Rp. xxxxx"
+                android:maxLines="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_3sdp"
+            >
+
+            <TextView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:layout_weight="0.25"
+                android:text="Biaya lain lain"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/jumlah_lain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:gravity="end"
+                android:layout_weight="1.5"
+                android:text="Rp. xxxxx"
+                android:maxLines="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginBottom="@dimen/_5sdp">
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="@color/grey_40"
+            android:layout_marginBottom="@dimen/_5sdp"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                android:layout_weight="0.25"
+                android:text="Jumlah dana diterima"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/jumlah_diterima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:gravity="end"
+                android:layout_weight="1.5"
+                android:text="Rp. xxxxx"
+                android:maxLines="1"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/bayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajukan Peminjaman"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:backgroundTint="@color/blue"
+        />
 </LinearLayout>
