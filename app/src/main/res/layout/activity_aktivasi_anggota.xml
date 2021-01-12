@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/grey_3"
     android:layout_height="match_parent"
     tools:context=".activity.AboutUsActivity">
     <androidx.appcompat.widget.Toolbar
@@ -47,4 +48,411 @@
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                card_view:cardCornerRadius="@dimen/_7sdp"
+                card_view:cardElevation="@dimen/_1sdp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Data Diri"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:alpha="0.3"
+                        android:background="@android:color/black"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Pendidikan Terakhir Anda"
+                        android:inputType="text"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Nama Ibu Kandung"
+                        android:inputType="text|textPersonName"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Status Pernikahan"
+                        android:textSize="@dimen/_10sdp"
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Jumlah Tanggungan (Isi 0 jika tidak ada)"
+                        android:textSize="@dimen/_10sdp"
+                        android:inputType="numberDecimal"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                card_view:cardCornerRadius="@dimen/_7sdp"
+                card_view:cardElevation="@dimen/_1sdp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:text="Data Alamat"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:alpha="0.3"
+                        android:background="@android:color/black"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Alamat"
+                        android:inputType="text"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Provinsi"
+                        android:inputType="text"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Kota/Kabupaten"
+                        android:inputType="text"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Kecamatan"
+                        android:inputType="text"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Kelurahan"
+                        android:inputType="text"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Kode Pos"
+                        android:inputType="text"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Status Tempat Tinggal"
+                        android:inputType="text"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:text="Alamat sesuai titik pada peta"
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:text="Pilih Alamat"
+                        android:inputType="text"
+                        android:textColor="@android:color/white"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@drawable/bg_round_button"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                card_view:cardCornerRadius="@dimen/_7sdp"
+                card_view:cardElevation="@dimen/_1sdp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:text="Penghasilan"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:alpha="0.3"
+                        android:background="@android:color/black"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Penghasilan Per Bulan"
+                        android:inputType="numberDecimal"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Pengeluaran Per Bulan"
+                        android:inputType="numberDecimal"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:text="Mana yang paling penting bagi Anda?"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Prioritas Pinjaman"
+                        android:inputType="text"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/round_edittext"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                card_view:cardCornerRadius="@dimen/_7sdp"
+                card_view:cardElevation="@dimen/_1sdp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:text="Dokumen Pendukung"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:alpha="0.3"
+                        android:background="@android:color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:text="Dengan mengupload dokumen pendukung, Anda dapat mempercepat proses pinjaman"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@android:color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:text="Upload Kartu Keluarga"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:text="Upload Dokumen"
+                        android:textColor="@android:color/white"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@drawable/bg_round_button"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:text="Simpan"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_round_button"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

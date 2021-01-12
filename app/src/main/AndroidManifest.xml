@@ -34,7 +34,7 @@
         <activity
             android:name=".activity.AktivasiAnggotaActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemes" />
+            android:theme="@style/AppActivasi" />
         <activity
             android:name=".activity.AboutUsActivity"
             android:screenOrientation="portrait"

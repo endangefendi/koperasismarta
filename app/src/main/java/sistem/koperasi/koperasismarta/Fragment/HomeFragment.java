@@ -1,5 +1,6 @@
 package sistem.koperasi.koperasismarta.Fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -144,14 +145,15 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         });
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private void addBanner() {
         list_banner.clear();
-        HomeBannerModel item1 = new HomeBannerModel(1, 1, getResources().getString(R.string.app_name),
-                getResources().getDrawable(R.drawable.pt), "PT");
-        HomeBannerModel item2 = new HomeBannerModel(1, 1, "Promo Bpjs",
-                getResources().getDrawable(R.drawable.bpjs), "Promo");
-        list_banner.add(item1);
-        list_banner.add(item2);
+        list_banner.add(new HomeBannerModel(1, 1, getResources().getString(R.string.app_name),
+                getResources().getDrawable(R.drawable.pt), "PT"));
+        list_banner.add(new HomeBannerModel(2, 3, "Promo Voucher",
+                getResources().getDrawable(R.drawable.gplay), "Promo"));
+        list_banner.add(new HomeBannerModel(3, 3, "Simpanan Koperasi",
+                getResources().getDrawable(R.drawable.tagihan_bpjs), "PT"));
         displayResultData(list_banner);
     }
 
@@ -332,9 +334,9 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         topUpMenu.add(new TopUpTagihanModel(R.drawable.gplay, "Voucher Google Play"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.asuransi, "Asuransi"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.tagihan_tv, "Tagihan Tv"));
-        topUpMenu.add(new TopUpTagihanModel(R.drawable.bpjs, "Pulsa"));
+        topUpMenu.add(new TopUpTagihanModel(R.drawable.pulsa, "Pulsa"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.itunes, "Itunes Gift"));
-        topUpMenu.add(new TopUpTagihanModel(R.drawable.tagihan_multi1, "Zakat"));
+        topUpMenu.add(new TopUpTagihanModel(R.drawable.ic_zakat, "Zakat"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.cash, "Multi Finance"));
         topUpMenu.add(new TopUpTagihanModel(R.drawable.pubg, "Pubg Mobile"));
         adapterTopUpTagihan.addList(topUpMenu);

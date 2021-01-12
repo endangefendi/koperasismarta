@@ -51,15 +51,9 @@
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/lyt_cart"
-                            android:layout_marginBottom="@dimen/spacing_medium"
-                            android:layout_marginLeft="@dimen/spacing_middle"
-                            android:layout_marginRight="@dimen/spacing_middle"
-                            android:layout_marginTop="@dimen/spacing_medium"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             card_view:cardCornerRadius="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginEnd="10dp"
                             card_view:cardElevation="3dp"
                             card_view:cardUseCompatPadding="true">
 
@@ -140,8 +134,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         card_view:cardCornerRadius="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         card_view:cardElevation="3dp"
                         card_view:cardUseCompatPadding="true">
 
@@ -199,8 +191,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         card_view:cardCornerRadius="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="@dimen/spacing_small"
                         card_view:cardElevation="3dp"
                         card_view:cardUseCompatPadding="true">
 

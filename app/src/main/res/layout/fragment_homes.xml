@@ -1172,7 +1172,7 @@
                                     android:layout_height="33dp"
                                     android:layout_gravity="center"
                                     android:background="@drawable/round_button"
-                                    android:src="@drawable/tagihan_multi1" />
+                                    android:src="@drawable/ic_zakat" />
 
                                 <TextView
                                     android:layout_width="match_parent"
